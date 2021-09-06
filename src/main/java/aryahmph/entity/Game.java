@@ -6,12 +6,8 @@ public class Game {
     private HashMap<String, String[]> categories;
     private String rules;
 
-    public Game(String rules) {
-        this.rules = rules;
-    }
-
     public HashMap<String, String[]> getCategories() {
-        this.categories = new HashMap<String, String[]>();
+        this.categories = new HashMap<>();
         this.categories.put("Animal", new String[]{"lion", "panda", "camel", "pig", "dog", "cat", "horse", "sheep", "fox", "cow"});
         this.categories.put("Fruit", new String[]{"apple", "banana", "orange", "mango", "grapes", "pineapple", "avocado", "lime"});
         return categories;
