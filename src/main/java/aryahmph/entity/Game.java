@@ -8,8 +8,8 @@ public class Game {
 
     public HashMap<String, String[]> getCategories() {
         this.categories = new HashMap<>();
-        this.categories.put("Animal", new String[]{"lion", "panda", "camel", "pig", "dog", "cat", "horse", "sheep", "fox", "cow"});
-        this.categories.put("Fruit", new String[]{"apple", "banana", "orange", "mango", "grapes", "pineapple", "avocado", "lime"});
+        this.categories.put("animal", new String[]{"lion", "panda", "camel", "pig", "dog", "cat", "horse", "sheep", "fox", "cow"});
+        this.categories.put("fruit", new String[]{"apple", "banana", "orange", "mango", "grapes", "pineapple", "avocado", "lime"});
         return categories;
     }
 
