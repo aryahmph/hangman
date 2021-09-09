@@ -10,6 +10,7 @@ public class Game {
         this.categories = new HashMap<>();
         this.categories.put("animal", new String[]{"lion", "panda", "camel", "pig", "dog", "cat", "horse", "sheep", "fox", "cow"});
         this.categories.put("fruit", new String[]{"apple", "banana", "orange", "mango", "grapes", "pineapple", "avocado", "lime"});
+        this.categories.put("color", new String[]{"white", "blue", "red", "brown", "black", "yellow", "pink", "green"});
         return categories;
     }
 

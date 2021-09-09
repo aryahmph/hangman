@@ -60,7 +60,8 @@ public class GameView {
             this.chances--;
         }
 
-        System.out.println();
+        System.out.println("\n*************");
+        System.out.println("The answer is " + this.word);
         if (chances == 0) System.out.println("Opportunity runs out, you lose");
         else System.out.println("Congratulation. You win");
 

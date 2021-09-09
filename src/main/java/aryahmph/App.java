@@ -25,12 +25,11 @@ public class App {
                 gameView.chooseCategory();
                 gameView.guess();
 
-                System.out.println("\nPlay again ? (y/n)");
+                System.out.print("\nPlay again ? (y/n) : ");
                 char repeatChar = bufferedReader.readLine().charAt(0);
                 if (repeatChar == 'n' || repeatChar == 'N') isRepeat = false;
-
             }
-            System.out.println("Thank you for playing! See you again~");
+            System.out.println("Thank you for playing! See you again ~");
         } catch (IOException e) {
             e.printStackTrace();
         }
