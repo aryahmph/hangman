@@ -3,11 +3,12 @@ package aryahmph.view;
 import aryahmph.helper.Input;
 import aryahmph.service.GameService;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public class GameView {
     private final Input inputUtil = new Input();
-    private GameService gameService;
+    private final GameService gameService;
 
     private int chances = 10;
     private String word;
@@ -16,7 +17,7 @@ public class GameView {
         this.gameService = gameService;
     }
 
-    public void enterPlayerName() {
+    public void enterPlayerName() throws IOException {
         System.out.println("-- HANGMAN\n");
         String name = inputUtil.input("Please enter your name");
         System.out.println("Welcome " + name + "!");
@@ -27,7 +28,7 @@ public class GameView {
         System.out.println(gameService.getRules());
     }
 
-    public String chooseCategory() {
+    public void chooseCategory() throws IOException {
         HashMap<String, String[]> categories = this.gameService.getCategories();
         System.out.println("\n== Category List");
         int i = 1;
@@ -40,17 +41,14 @@ public class GameView {
             throw new IllegalArgumentException();
         }
         word = this.gameService.generateRandomWordWithCategory(category);
-        return category;
     }
 
-    public void guess() {
-        System.out.println(this.word);
+    public void guess() throws IOException {
         StringBuilder hangmanWord = new StringBuilder();
         for (int i = 0; i < this.word.length(); i++) hangmanWord.append("_");
         System.out.println(hangmanWord);
 
         String hangmanWordStr = hangmanWord.toString();
-
         while (chances > 0) {
             System.out.println("\n== Your chances : " + this.chances);
             char guessChar = inputUtil.input("Guess character").toLowerCase().charAt(0);
@@ -63,7 +61,9 @@ public class GameView {
         }
 
         System.out.println();
-        if (chances == 0) System.out.println("LOSE");
-        else System.out.println("WIN");
+        if (chances == 0) System.out.println("Opportunity runs out, you lose");
+        else System.out.println("Congratulation. You win");
+
+        this.chances = 10;
     }
 }
