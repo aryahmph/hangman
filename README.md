@@ -16,7 +16,9 @@ $ git clone https://github.com/aryahmph/hangman
 $ cd hangman
 ```
 
-2. Run distribution file
+2. Install Java, the latest version is better.
+
+3. Run distribution file
 
 ```
 $ java -jar target/hangman-1.0-SNAPSHOT-jar-with-dependencies.jar
