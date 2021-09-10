@@ -1,0 +1,18 @@
+@startuml
+start
+:Input name;
+
+repeat
+:Display game rules;
+:Choose word category;
+
+repeat :Guess word;
+backward:Chances - 1;
+repeat while (Wrong guess and chances != 0)
+
+:Display game result;
+repeat while (Play again ?) is (yes)
+->no;
+
+end
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+actor "User" as user
+node "Hangman" {
+    component "View" as view
+    component "Service" as service
+    component "Repository" as repository
+}
+user --> view
+view <--> service
+service <--> repository
+
+@enduml
