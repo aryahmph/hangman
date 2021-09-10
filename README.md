@@ -5,6 +5,8 @@
 Hangman is a word guessing game with as many chances as a certain number. The background of making this game is a
 college assignment. This game uses terminal media in using it.
 
+Demo video : https://youtu.be/a6yYxWVDeFI
+
 ## Getting Started
 
 ### Run Program
